@@ -9,7 +9,13 @@ To install, navigate to the root directory (where 'package.json' is located) and
 
 ### Usage
 
-First, DozeJS must be included from your HTML.
+Next, in your HTML, you need to set the base url for the RESTful web service. This is accomplished using a 'meta' tag.
+
+```
+	<meta name="site_url" content="http://somedomain/api/v1/" />
+```
+
+Next, DozeJS must be included from your HTML.
 
 ```
     <script src="node_modules/systemjs/dist/system.js"></script>
@@ -29,11 +35,6 @@ First, DozeJS must be included from your HTML.
     </script>
 ```
 
-Next, in your HTML, you need to set the base url for the RESTful web service. This is accomplished using a <meta> tag.
-
-```
-	<meta name="site_url" content="http://somedomain/api/v1/" />
-```
 
 Finally, add a resource element to your DOM. (More about resources can be found in the **Resources** section below.)
 
