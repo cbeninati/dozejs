@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules
+jspm_packages
+typings
+typings.json
+
+# Optional npm cache directory
+.npm

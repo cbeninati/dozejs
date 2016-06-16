@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "systemjs": "^0.19.31",
+    "typescript": "^1.8.10"
+  },
+
+   "scripts" : {
+      "postinstall": "typings install dt~jquery --global --save"
+   }
+}
