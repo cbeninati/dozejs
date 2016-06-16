@@ -68,27 +68,33 @@ One of the children elements must have a class of **dz-target_view**.
 The other child element must have a class of **dz-target_edit**.
 
 ### Actions
-**dz-show** (GET: /show/{id})
+
+DozeJS listens for various DOM events (click/submit) on any DOM element with a valid action class (as listed below).
+
+For instance, if a link with a class 'dz-edit' is clicked, using the data-id attribute on the parent **dz-resource** element, will call '{id}/edit' on the RESTful API. Then, DozeJS will render the response to the **dz-target_edit** child of that **dz-resource**.
+
+**dz-show (GET: /show/{id})**
 
 Show will render the contents of a resource response to the first child of the **dz-resource** element which has a  **dz-target_view** class.
 
 *Show will also hide the **dz-target_edit**element.
 
-**dz-new** (POST: /new)
+**dz-new (POST: /new)**
+
 New will render the contents of the '/new' resource response to the **dz-target_edit** element.
 
 *New will also hide the **dz-target_view** element, allowing us to reveal it in the event of a 'cancel' action.
 
-**dz-edit** (PUT: /{id}/edit)
+**dz-edit (PUT: /{id}/edit)**
 
 Edit will render the contents of the '/{id}/edit' resource response to the **dz-target_edit** element.
 
 *Edit will also hide the **dz-target_view** element, allowing us to reveal it in the event of a 'cancel' action.
 
-**dz-cancel** (GET: /show/{id?})
+**dz-cancel (GET: /show/{id?})**
 
 Cancel is a convenience method for 'show', returning back to a resource's view instead of completing a 'new' or 'edit' action.
 
-**dz-delete** (DELETE: /{id}/delete)
+**dz-delete (DELETE: /{id}/delete)**
 
 Delete, after calling DELETE on the current resource, will remove the entire **dz-resource** element from the DOM.
