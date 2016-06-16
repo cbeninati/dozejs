@@ -1,11 +1,15 @@
 # DozeJS
 
+### Description
+
+DozeJS is a Typescript library that uses jQuery's AJAX and DOM selection to simplify the AJAX process for RESTful resources.
+
 ### Installation
 To install, navigate to the root directory (where 'package.json' is located) and run 'npm install'.
 
 ### Usage
 
-First, Doze must be included from your HTML.
+First, DozeJS must be included from your HTML.
 
 ```
     <script src="node_modules/systemjs/dist/system.js"></script>
