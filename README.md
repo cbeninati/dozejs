@@ -39,7 +39,7 @@ Next, DozeJS must be included from your HTML.
 Finally, add a resource element to your DOM. (More about resources can be found in the **Resources** section below.)
 
 ```
-    <div class="dz-resource" data-resource="some_resource" data-id="2" parent_id="1">
+    <div class="dz-resource" data-resource="some_resource" data-id="2" data-parent_id="1" data-parent_resource="parent_resource">
         <div class="dz-target_view"></div>
         <div class="dz-target_edit"></div>
 
