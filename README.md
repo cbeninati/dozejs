@@ -12,43 +12,43 @@ To install, navigate to the root directory (where 'package.json' is located) and
 First, in your HTML, you need to set the base url for the RESTful web service. This is accomplished using a 'meta' tag.
 
 ```
-	<meta name="site_url" content="http://somedomain/api/v1/" />
+<meta name="site_url" content="http://somedomain/api/v1/" />
 ```
 
 Next, DozeJS must be included from your HTML.
 
 ```
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script src="node_modules/typescript/lib/typescript.js"></script>
-    <script>
-        System.config({
-            transpiler: 'typescript',
-            packages: {
-                src: {
-                    defaultExtension: 'ts'
-                }
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script src="node_modules/typescript/lib/typescript.js"></script>
+<script>
+    System.config({
+        transpiler: 'typescript',
+        packages: {
+            src: {
+                defaultExtension: 'ts'
             }
-        });
-        System
-                .import('src/doze/listener.ts')
-                .then(null, console.error.bind(console));
-    </script>
+        }
+    });
+    System
+            .import('src/doze/listener.ts')
+            .then(null, console.error.bind(console));
+</script>
 ```
 
 
 Finally, add a resource element to your DOM. (More about resources can be found in the **Resources** section below.)
 
 ```
-    <div class="dz-resource" data-resource="some_resource" data-id="2" data-parent_id="1" data-parent_resource="parent_resource">
-        <div class="dz-target_view"></div>
-        <div class="dz-target_edit"></div>
+<div class="dz-resource" data-resource="some_resource" data-id="2" data-parent_id="1" data-parent_resource="parent_resource">
+    <div class="dz-target_view"></div>
+    <div class="dz-target_edit"></div>
 
-        <a href="#" class="dz-show">view</a>
-        <a href="#" class="dz-new">new</a>
-        <a href="#" class="dz-edit">edit</a>
-        <a href="#" class="dz-cancel">cancel</a>
-        <a href="#" class="dz-delete">delete</a>
-    </div> <!-- container -->
+    <a href="#" class="dz-show">view</a>
+    <a href="#" class="dz-new">new</a>
+    <a href="#" class="dz-edit">edit</a>
+    <a href="#" class="dz-cancel">cancel</a>
+    <a href="#" class="dz-delete">delete</a>
+</div> <!-- container -->
 ```
 
 ## Resources
