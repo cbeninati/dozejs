@@ -24,7 +24,6 @@ export class DozeAJAX
             url:        route.path,
             data:       data,
             method:     route.method,
-            crossDomain : true,
             success:    function (ajax_response) {
                 callback(ajax_response);
             }
@@ -81,10 +80,12 @@ export class DozeAJAX
     public static Edit(element: HTMLElement, event, method: string = 'edit')
     {
         event.preventDefault();
-        let doze = DozeAJAX.Dozify(element);
+        let doze        = DozeAJAX.Dozify(element);
 
         // Get the RESTful path.
-        let path = doze.rest.GetPath(method);
+        let path        = doze.rest.GetPath(method);
+
+        let parameters  = {parent: doze.parent.id};
 
         // Call the RESTful path.
         let callback = function(ajax_response) {
@@ -95,7 +96,7 @@ export class DozeAJAX
         };
 
         // Render the "edit" view.
-        DozeAJAX.Call(path, null, callback);
+        DozeAJAX.Call(path, parameters, callback);
     }
 
     public static Delete(element: HTMLElement, event)
